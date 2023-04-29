@@ -1,4 +1,4 @@
-This creates CNAME record for mongodb
+#This creates CNAME record for mongodb
 
 resource "aws_route53_record" "redis" {
   zone_id = data.terraform_remote_state.vpc.outputs.PRIVATE_HOSTED_ZONE_ID
