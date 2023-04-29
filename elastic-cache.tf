@@ -14,7 +14,7 @@ resource "aws_elasticache_cluster" "redis" {
 
 resource "aws_elasticache_parameter_group" "default" {
   name    = "robot-${var.ENV}-redis-pg"
-  family  = var.ELASTIC_CACHE_ENGINE_VERSION
+  family  = "redis6.x"
 }
 
 
