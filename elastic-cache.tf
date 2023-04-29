@@ -2,7 +2,7 @@ resource "aws_elasticache_cluster" "redis" {
   cluster_id           = "robot-${var.ENV}-redis"
   engine               = "redis"
   node_type            = var.ELASTIC_CACHE_INSTANCE_TYPE
-  num_cache_nodes      = var.ELASTIC_CACHE_NODE_COUNT
+  num_cache_nodes      = 1
   parameter_group_name = aws_elasticache_parameter_group.default.name
   engine_version       = var.ELASTIC_CACHE_ENGINE_VERSION
   port                 = var.ELASTIC_CACHE_PORT
